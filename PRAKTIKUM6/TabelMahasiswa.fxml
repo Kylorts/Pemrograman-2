@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PRAKTIKUM6.TabelMahasiswaController">
+   <center>
+      <TableView fx:id="tblMahasiswa" prefHeight="373.0" prefWidth="503.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="kolomNim" prefWidth="124.6666921377182" text="NIM" />
+          <TableColumn fx:id="kolomNama" prefWidth="205.9999237060547" text="Nama" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>
