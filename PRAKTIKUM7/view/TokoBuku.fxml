@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PRAKTIKUM7.controller.TabController">
+   <children>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tabPelanggan" text="Data Pelanggan">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" />
+               </content>
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" />
+               </content>
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <top>
+                        <VBox prefHeight="155.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <HBox prefHeight="167.0" prefWidth="600.0">
+                                 <children>
+                                    <AnchorPane prefHeight="176.0" prefWidth="600.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="14.0" text="Nama" />
+                                          <Label layoutX="16.0" layoutY="48.0" text="Email" />
+                                          <Label layoutX="16.0" layoutY="87.0" text="Telepon" />
+                                          <TextField fx:id="txtNamaPelanggan" layoutX="66.0" layoutY="10.0" prefHeight="25.0" prefWidth="250.0" />
+                                          <TextField fx:id="txtEmailPelanggan" layoutX="66.0" layoutY="44.0" prefHeight="25.0" prefWidth="250.0" />
+                                          <TextField fx:id="txtTeleponPelanggan" layoutX="66.0" layoutY="83.0" prefHeight="25.0" prefWidth="250.0" />
+                                          <Button fx:id="btnAddPelanggan" layoutX="30.0" layoutY="119.0" mnemonicParsing="false" onAction="#addPelanggan" text="Add" />
+                                          <Button fx:id="btnEditPelanggan" layoutX="81.0" layoutY="119.0" mnemonicParsing="false" onAction="#editPelanggan" text="Edit" />
+                                          <Button fx:id="btnDeletePelanggan" layoutX="132.0" layoutY="119.0" mnemonicParsing="false" onAction="#hapusPelanggan" text="Delete" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </top>
+                     <center>
+                        <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <TableView fx:id="tblPelanggan" prefHeight="215.0" prefWidth="607.0">
+                                <columns>
+                                  <TableColumn fx:id="kolomNamaPelanggan" prefWidth="259.99992883205414" text="Nama" />
+                                  <TableColumn fx:id="kolomEmailPelanggan" minWidth="0.0" prefWidth="213.33331298828125" text="Email" />
+                                    <TableColumn fx:id="kolomTeleponPelanggan" prefWidth="126.66665649414062" text="Telepon" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </HBox>
+                     </center>
+                  </BorderPane>
+               </content>
+          </Tab>
+          <Tab fx:id="tabBuku" text="Data Buku">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <top>
+                        <VBox prefHeight="183.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <AnchorPane prefHeight="247.0" prefWidth="600.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="14.0" text="Judul" />
+                                    <Label layoutX="11.0" layoutY="51.0" text="Penulis" />
+                                    <Label layoutX="12.0" layoutY="88.0" text="Harga" />
+                                    <Label layoutX="18.0" layoutY="123.0" text="Stok" />
+                                    <TextField fx:id="txtJudulBuku" layoutX="62.0" layoutY="10.0" prefHeight="25.0" prefWidth="250.0" />
+                                    <TextField fx:id="txtPenulisBuku" layoutX="62.0" layoutY="47.0" prefHeight="25.0" prefWidth="250.0" />
+                                    <TextField fx:id="txtHargaBuku" layoutX="62.0" layoutY="84.0" prefHeight="25.0" prefWidth="250.0" />
+                                    <Button fx:id="btnAddBuku" layoutX="30.0" layoutY="151.0" mnemonicParsing="false" onAction="#addBuku" text="Add" />
+                                    <Button fx:id="btnEditBuku" layoutX="81.0" layoutY="151.0" mnemonicParsing="false" onAction="#editBuku" text="Edit" />
+                                    <Button fx:id="btnDeleteBuku" layoutX="126.0" layoutY="151.0" mnemonicParsing="false" onAction="#hapusBuku" text="Delete" />
+                                    <TextField fx:id="txtStokBuku" layoutX="62.0" layoutY="119.0" prefHeight="25.0" prefWidth="79.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                     </top>
+                     <center>
+                        <TableView fx:id="tblBuku" prefHeight="215.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                          <columns>
+                            <TableColumn fx:id="kolomJudulBuku" prefWidth="206.66663110256195" text="Judul" />
+                            <TableColumn fx:id="kolomPenulisBuku" prefWidth="130.66673278808594" text="Penulis" />
+                              <TableColumn fx:id="kolomHargaBuku" prefWidth="192.66659545898438" text="Harga" />
+                              <TableColumn fx:id="kolomStokBuku" prefWidth="71.33331298828125" text="Stok" />
+                          </columns>
+                        </TableView>
+                     </center>
+                  </BorderPane>
+               </content>
+          </Tab>
+            <Tab fx:id="tabPenjualan" text="Data Penjualan">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <top>
+                        <VBox prefHeight="182.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="14.0" text="Nama Pelanggan" />
+                                    <Label layoutX="13.0" layoutY="54.0" text="Buku" />
+                                    <Label layoutX="14.0" layoutY="91.0" text="Jumlah" />
+                                    <ComboBox fx:id="cmbPelanggan" layoutX="116.0" layoutY="10.0" prefHeight="25.0" prefWidth="250.0" />
+                                    <ComboBox fx:id="cmbBuku" layoutX="116.0" layoutY="50.0" prefHeight="25.0" prefWidth="250.0" />
+                                    <Label layoutX="11.0" layoutY="128.0" text="Tanggal" />
+                                    <DatePicker fx:id="dtpPenjualan" layoutX="116.0" layoutY="124.0" />
+                                    <Button fx:id="btnAddPenjulan" layoutX="34.0" layoutY="156.0" mnemonicParsing="false" onAction="#addPenjualan" text="Add" />
+                                    <Button fx:id="btnEditPenjualan" layoutX="81.0" layoutY="156.0" mnemonicParsing="false" onAction="#editPenjualan" text="Edit" />
+                                    <Button fx:id="btnDeletePenjualan" layoutX="126.0" layoutY="156.0" mnemonicParsing="false" onAction="#hapusPenjualan" text="Delete" />
+                                    <TextField fx:id="txtJumlahBuku" layoutX="116.0" layoutY="87.0" prefHeight="25.0" prefWidth="91.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                     </top>
+                     <center>
+                        <TableView fx:id="tblPenjualan" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                          <columns>
+                            <TableColumn fx:id="kolomPelangganPenjualan" prefWidth="159.3333181142807" text="Nama Pelanggan" />
+                            <TableColumn fx:id="kolomBuku" prefWidth="138.6666717529297" text="Buku" />
+                              <TableColumn fx:id="kolomTanggalPenjualan" prefWidth="117.99993896484375" text="Tanggal Penjualan" />
+                              <TableColumn fx:id="kolomJumlah" prefWidth="66.6666259765625" text="Jumlah" />
+                              <TableColumn fx:id="kolomTotalHarga" prefWidth="120.00009155273438" text="Total Harga" />
+                          </columns>
+                        </TableView>
+                     </center>
+                  </BorderPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</StackPane>
